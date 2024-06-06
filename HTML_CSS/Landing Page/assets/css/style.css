@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #0A1128;
+    --white-color: #fff;
+    --light-gray-color: #ccc;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+.main-bg {
+    background-image: url("../img/main-bg.svg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-container {
+
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.white-bg {
+    background: var(--white-color);
+}
+
+.menu {
+    color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--light-gray-color)
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+}
+
+.menu h1 a {
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu ul li a:visited {
+    color: var(--primary-color);
+}
+
+.menu ul li a:active {
+    color: var(--primary-color);
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--primary-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}

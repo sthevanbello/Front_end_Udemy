@@ -16,14 +16,16 @@
 
 <body>
     <header>
+        <input type="checkbox" name="" id="close-menu" class="close-menu" role="button">
+        <label class="close-menu-label" for="close-menu" title="close-menu"></label>
         <aside class="menu white-bg">
             <div class="main-content menu-content">
-                <h1>
+                <h1 onclick="document.getElementById('close-menu').checked = false">
                     <a href="">LOGO</a>
                 </h1>
                 <nav>
-                    <ul>
-                        <li><a href="#teste">Home</a></li>
+                    <ul onclick="document.getElementById('close-menu').checked = false">
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#bio">Bio</a></li>
                         <li><a href="#itens">Itens</a></li>
                         <li><a href="#galeria">Galeria</a></li>
@@ -34,7 +36,7 @@
         </aside>
     </header>
     <main>
-        <section id="teste" class=" intro main-bg section">
+        <section id="home" class=" intro main-bg section">
             <div class="menu-spacing"></div>
             <div class="main-content intro-content">
                 <div class="intro-text-content">
@@ -55,6 +57,8 @@
         </section>
         <section id="bio" class=" bio white-bg section">
             <div class="main-content bio-content">
+            <div class="menu-spacing"></div>
+
                 <div class="bio-text-content">
                     <h2>Robert Anson Heinlein: Biografia e obra</h2>
                     <p>
@@ -84,8 +88,10 @@
         </section>
         <section id="itens" class=" main-bg section pontos">
             <div class="main-content pontos-content">
-                <h2>Itens importantes</h2>
-                <div class="grid-pontos">
+            <!-- <div class="menu-spacing"></div> -->
+
+            <h2>Itens importantes</h2>
+            <div class="grid-pontos">
                     <article>
                         <h3>Item</h3>
                         <p>
@@ -133,11 +139,14 @@
             <div class="main-content galeria-content">
                 <h2>Galeria</h2>
                 <div class="grid-galeria">
-                    <div class="grid-foto">Teste</div>
-                    <div class="grid-foto">Teste</div>
-                    <div class="grid-foto">Teste</div>
-                    <div class="grid-foto">Teste</div>
-                    <div class="grid-foto">Teste</div>
+                    <div class="grid-foto">
+                        <div>
+                            <img src="./assets/img/Sonda.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="grid-foto">
+                        <img src="https://4.bp.blogspot.com/-uedpMT7nbyo/W9MIZdyKO1I/AAAAAAAATWU/6Q0N-1nW8bsZNKpmTbbou6qwoprKXayfgCLcBGAs/s1600/1.jpg"
+                            alt=""></div>
                     <div class="grid-foto">Teste</div>
                     <div class="grid-foto">Teste</div>
                     <div class="grid-foto">Teste</div>
@@ -145,9 +154,46 @@
                 </div>
             </div>
         </section>
-        <section id="contato" class="section white-bg">
-            <div class="main-content galeria-content">
-                <h2>Contato</h2>
+        <section id="contato" class=" intro main-bg section">
+            <div class="menu-spacing"></div>
+            <div class="main-content intro-content">
+                <div class="intro-text-content">
+                    <h2>Contato</h2>
+                    <p>
+                        “… E Ele Construiu uma Casa Torta” (“… And He Built a Crooked House”) foi primeiro publicado na
+                        revista Astounding Science Fiction, em 1940. Depois, foi publicado no Brasil em duas antologias,
+                        “A Sonda do Tempo” (“Time Probe”), editado por Arthur C. Clarke, em 1966 e publicado mais tarde
+                        pela Editora Nova Fronteira, e “… Para Onde Vamos?” (“Where Do We Go From There”), editado por
+                        Isaac Asimov e publicado pela Editora Hemus, de 1979.
+                    </p>
+                </div>
+                <div class="intro-img">
+                    <img src="./assets/img/Hypercube.svg" alt="hypercubo Teseract">
+                </div>
+                <div class="contato-form">
+                    <fieldset class="form-grid">
+                        <legend>Contate-me</legend>
+                        <div class="form-group">
+                            <label for="first-name">Primeiro nome</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Sobrenome</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="last-name">Mensagem</label>
+                            <textarea  name="message" id="message" cols="30" rows="10" placeholder="Deixe a sua mensagem aqui"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </fieldset>
+                </div>
             </div>
         </section>
     </main>
